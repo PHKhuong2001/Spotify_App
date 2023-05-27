@@ -1,7 +1,6 @@
-
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify/screen/Playlist_screen.dart';
+import 'package:get/get.dart';
 import 'package:spotify/screen/login.dart';
 import 'package:spotify/screen/splash_screen.dart';
 import 'db/mongoDB.dart';
@@ -19,11 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const color = Color(0xff0F0E0E);
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       home: AnimatedSplashScreen(

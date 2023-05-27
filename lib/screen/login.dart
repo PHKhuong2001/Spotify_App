@@ -1,11 +1,7 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:spotify/home_screen.dart';
 import 'package:spotify/screen/home_spotify.dart';
 
 import 'signup.dart';
-import 'package:page_transition/page_transition.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -25,7 +21,7 @@ class Login extends StatefulWidget {
 //   }
 
 class _LoginState extends State<Login> {
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
@@ -119,11 +115,13 @@ class _LoginState extends State<Login> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (build) => const Spotify()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (build) => const Spotify()));
                           },
                           child: const Center(
-                            child:  Text(
+                            child: Text(
                               'LOGIN',
                               style: TextStyle(
                                   color: Colors.white,
@@ -154,7 +152,7 @@ class _LoginState extends State<Login> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                 const Text(
+                const Text(
                   'New to Spotify ?',
                   style: TextStyle(
                     fontFamily: 'Montserrat',
@@ -164,13 +162,12 @@ class _LoginState extends State<Login> {
                 SizedBox(width: 5.0),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (build) => SignupPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (build) => SignupPage()));
                   },
                   child: const Text(
                     'Register',
                     style: TextStyle(
-                        
                         color: Colors.green,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
