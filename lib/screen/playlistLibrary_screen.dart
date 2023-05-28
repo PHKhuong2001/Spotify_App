@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/screen/playlist_screen.dart';
 
 class PlayListLibraryScreen extends StatefulWidget {
   const PlayListLibraryScreen({super.key});
@@ -48,16 +49,19 @@ class _PlayListScreenState extends State<PlayListLibraryScreen> {
           crossAxisCount: 2,
           children: [
             Container(
-                // child: GestureDetector(
-                //   onTap: () {
-                //               Navigator.push(context, MaterialPageRoute(
-                //                 builder: (build) => PlayerScreen()));
-                //             },
-                //   child: Image.asset('assets/images/billie.jpg', scale: 2,),
-
-                // ),
-
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (build) => const PlayListScreen()));
+                },
+                child: Image.asset(
+                  'assets/images/billie.jpg',
+                  scale: 2,
                 ),
+              ),
+            ),
             ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
               child: Image.asset(
@@ -107,44 +111,48 @@ class _PlayListScreenState extends State<PlayListLibraryScreen> {
       bottomNavigationBar: Row(
         children: [
           Container(
-            child: Icon(
+            width: MediaQuery.of(context).size.width / 4,
+            height: 80,
+            decoration:
+                const BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
+            child: const Icon(
               Icons.home_outlined,
               color: Color.fromARGB(255, 10, 127, 14),
               size: 40,
             ),
-            width: MediaQuery.of(context).size.width / 4,
-            height: 80,
-            decoration: BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
           ),
           Container(
-            child: Icon(
+            width: MediaQuery.of(context).size.width / 4,
+            height: 80,
+            decoration:
+                const BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
+            child: const Icon(
               Icons.library_music_outlined,
               color: Color.fromARGB(255, 10, 127, 14),
               size: 40,
             ),
-            width: MediaQuery.of(context).size.width / 4,
-            height: 80,
-            decoration: BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
           ),
           Container(
-            child: Icon(
+            width: MediaQuery.of(context).size.width / 4,
+            height: 80,
+            decoration:
+                const BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
+            child: const Icon(
               Icons.access_time,
               color: Color.fromARGB(255, 10, 127, 14),
               size: 40,
             ),
-            width: MediaQuery.of(context).size.width / 4,
-            height: 80,
-            decoration: BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
           ),
           Container(
-            child: Icon(
+            width: MediaQuery.of(context).size.width / 4,
+            height: 80,
+            decoration:
+                const BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
+            child: const Icon(
               Icons.person_2_outlined,
               color: Color.fromARGB(255, 10, 127, 14),
               size: 40,
             ),
-            width: MediaQuery.of(context).size.width / 4,
-            height: 80,
-            decoration: BoxDecoration(color: Color.fromARGB(255, 58, 57, 57)),
           ),
         ],
       ),
