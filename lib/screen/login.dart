@@ -53,9 +53,9 @@ class _LoginState extends State<Login> {
                             fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(16.0, 175.0, 17.0, 16.0),
-                    child: const Text('Wellcome Spotify',
-                        style: TextStyle(
+                    padding: EdgeInsets.fromLTRB(16.0, 175.0, 17.0, 16.0),
+                    child: Text('Wellcome Spotify',
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold)),
@@ -160,7 +160,7 @@ class _LoginState extends State<Login> {
                 ),
                 SizedBox(width: 5.0),
                 InkWell(
-                  onTap: () {
+                  onDoubleTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (build) => SignupPage()));
                   },
